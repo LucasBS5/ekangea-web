@@ -8,12 +8,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/base.css">
 </head>
 <body>
-    <header class="header" style="visibility: visible;">
+    <header class="header">
         <div class="header__container">
             <a href="" class="header__logo">
                 <img src="img/logo-blanco.png" alt="Logo de Ekangea" class="header__logo-img">
@@ -21,11 +21,10 @@
 
             <!-- Navegacion d escritorio -->
             <nav class="header__nav" aria-label="Navegacion">
-                <ul class="header__menu">
-                    <li class="header__item"><a href="#inicio" class="header__link">Inicio</a></li>
-                    <li class="header__item"><a href="#servicios" class="header__link">Servicios</a></li>
-                    <li class="header__item"><a href="#proyectos" class="header__link">Proyectos</a></li>
-                    <li class="header__item"><a href="#nosotros" class="header__link">Nosotros</a></li>
+                <ul class="header__menu font-body">
+                    <li class="header__item"><a href="#story" class="header__link">Historia</a></li>
+                    <li class="header__item"><a href="#project" class="header__link">Proyecto</a></li>
+                    <li class="header__item"><a href="#us" class="header__link">Nosotros</a></li>
                 </ul>
             </nav>
 
@@ -39,25 +38,54 @@
             </div> -->
         </div>
     </header>
-
-    <main class="">
+    <main class="content-flow">
         <section class="hero">
             <div class="font-title">
                 <h1>Ekangea</h1>
             </div>
-        </section>
-        <section class="story">
-            <div class="font-secondary">
-                <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+            <div class="subtitle">
+                <h2>La nueva forma del planeta tierra</h2>
             </div>
         </section>
-        <section class="about">
-            <div class="font-secondary">
-                <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+
+        <section class="story" id="story">
+            <div class="story__container font-body">
+                <article class="story__cap">
+                    <p class="story__text">Los Ekans viven en armonía con su ecosistema sin imponer jerarquías o dominación violenta, conviviendo con el entorno y otras especies en lugar de utilizarlos a su favor.
+                    </p>            
+                </article>
+                <article class="story__cap">
+                    <p class="story__text">Ekangea se divide en cuatro biomas: Skog el bosque, Jangal la jungla, Sahra el Desierto y Nivis el nevado.</p>
+                    <p class="story__text">Si bien los diferentes biomas hacen que haya separaciones naturales y diferencias culturales, eso no afecta en su visión de comunidad y respeto.</p>
+                </article>
+                <article class="story__cap">
+                    <p class="story__text">Cada año, se celebra un ritual llamado <span>"Ekexis"</span>, en el cual los Ekans que pasen a su vida adulta obtendran la revelación de su aura, la energía espiritual que determina el bioma con el que posee mayor afinidad y en el que continuará desarrollando su vida.</p>
+                </article>
+                <article class="story__cap">
+                    <p class="story__text">Los rastros de una civilización extinta hace miles de años continúan inquietando a los Ekans, quienes curiosos sobre los artefactos y materiales que día a día descubren en el planeta, teorizan acerca de sus utilidades y el modo de vida de estos seres anteriores a ellos.
+                    </p>
+                </article>
+            </div>
+        </section>
+        <section class="project" id="project">
+            <div class="section__container">
+                <div class="font-body section__title">
+                    <h3>Proximamente...</h3>
+                </div>
+            </div>
+        </section>
+        <section class="us" id="us">
+            <div class="section__container">
+                <div class="font-body section__title">
+                    <h3>Nosotros</h3>
+                </div>
+                <div class="font-body">
+                    <p>Universo: <a href="https://www.instagram.com/ekangea.tdm3/">https://www.instagram.com/ekangea.tdm3/</a></p>
+                    <p>Nosotros: <a href="https://www.instagram.com/somos.ekangea/">https://www.instagram.com/somos.ekangea/</a></p>
+                </div>
             </div>
         </section>
     </main>
+    <script src="scripts/scroll-reveal.js"></script>
 </body>
 </html>

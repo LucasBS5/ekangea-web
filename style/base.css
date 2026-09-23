@@ -1,20 +1,30 @@
+/*HACER UN REGISTRO FONT FACE POR CADA PESO DE TIPOGRAFÍA O FUENTE DISTINTA*/
+
 @font-face {
-    font-family: "Aclonica", sans-serif;
-    src:url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+    font-family: "Aclonica";
+    src:url('../fonts/Aclonica-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Inter'; 
+    src: url('../fonts/Inter-Variable.ttf') format('truetype');
+    font-weight: 100 900; 
+    font-style: normal;
+    font-display: swap;
+}
+
 :root{
-    --font-title: 'Aclonica';
-    --font-secondary: serif;
+    --font-title: 'Aclonica', sans-serif;
+    --font-body: "Inter", sans-serif;
     --color-bg:#1d1d20;
-    --color-font-text:#e0e0e0;
+    --color-font-text:#c7c7cc;
     --color-font-title:#E5E5E5;
     
     /* Header */
-    --bg-header: rgba(18, 18, 18, 0.75);
+    --bg-header: rgba(18, 18, 18, 0.70);
     --border-color: rgba(255, 255, 255, 0.08);
     --text-color-main: #f5f5f7;
     --text-muted: #a1a1a6;
@@ -23,10 +33,10 @@
     --transition: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 
     /* Espaciados */
+    --section-spacing: clamp(4rem, 8vw, 8rem);
     --space-xs: 0.5rem;
     --space-md: 1.5rem;
     --space-xl: 4rem;
-    --space-gallery: 4rem 0;
 
     --anim-timing: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Un easing más elegante */
 }
@@ -46,17 +56,33 @@ body{
     background-color: var(--color-bg);
 }
 
-header{
+.story,
+.project,
+.us {
+  padding-bottom: var(--section-spacing); 
+}
+
+.header{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: var(--header-height);
+    z-index: 1000;
     background-color: var(--bg-header);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border-color);
-    z-index: 1000;
+    transform: translateY(-100%);
+    pointer-events: none; 
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+        opacity 0.35s ease;
+}
+
+.header.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .header__container {
@@ -113,18 +139,64 @@ header{
 .font-title{
     font-family:var(--font-title);
     font-size:3rem;
-    font-weight: 800;
     color: var(--color-font-title);
+}
+
+.subtitle{
+    font-family:var(--font-body);
+    font-size:1rem;
+    font-weight: 300;
+    font-variation-settings: 'wght' 300;
+    color: var(--color-font-text);
+}
+
+.font-body{
+    font-family:var(--font-body);
+    font-size: 1.125rem;
+    font-weight: 500;
+    font-variation-settings: 'wght' 500;
+    color: var(--color-font-text);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.hero{
+    background-image: url('../img/image3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 1.20rem;
 }
 
-.font-secondary{
-    font-family:var(--font-secondary);
-    font-size:1.2rem;
-    font-weight: 200;
-    color: var(--color-font-text);
+.section__container{
+    padding: 0 var(--space-md); 
+}
+
+.section__title{
+    font-size: 1.25rem;
+}
+
+.story {
+    padding: 6rem 1.5rem;
+}
+
+.story__container {
+    max-width: 680px; /* supuesto ancho de lectura editorial comodo */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem; 
+}
+
+.story__cap {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 /* RESPONSIVE */
