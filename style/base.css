@@ -1,4 +1,4 @@
-/*HACER UN REGISTRO FONT FACE POR CADA PESO DE TIPOGRAFÍA O FUENTE DISTINTA*/
+/* ========== HACER UN REGISTRO FONT FACE POR CADA PESO DE TIPOGRAFÍA O FUENTE DISTINTA ==========*/
 
 @font-face {
     font-family: "Aclonica";
@@ -33,7 +33,7 @@
     --transition: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 
     /* Espaciados */
-    --section-spacing: clamp(4rem, 8vw, 8rem);
+    --section-spacing: 0 4.25rem 6rem 4.25rem;
     --space-xs: 0.5rem;
     --space-md: 1.5rem;
     --space-xl: 4rem;
@@ -56,10 +56,13 @@ body{
     background-color: var(--color-bg);
 }
 
-.story,
+.story {
+    padding: 6rem 1.5rem;
+}
+
 .project,
 .us {
-  padding-bottom: var(--section-spacing); 
+  padding: var(--section-spacing); 
 }
 
 .header{
@@ -170,17 +173,13 @@ body{
     gap: 1.20rem;
 }
 
-.section__container{
+/* .section__container{
     padding: 0 var(--space-md); 
-}
+} */
 
 .section__title{
     font-size: 1.25rem;
     padding-bottom: 1rem;
-}
-
-.story {
-    padding: 6rem 1.5rem;
 }
 
 .story__container {
@@ -203,9 +202,6 @@ body{
     font-variation-settings: 'wght' 400;
 }
 
-.formulario{
-}
-
 .form-ekesis{
     display: flex;
     flex-direction: column;
@@ -214,11 +210,11 @@ body{
     gap: 1rem;
 }
 
-/* RESPONSIVE */
+/* ========== RESPONSIVE ========== */
 
 @media (max-width: 768px) {
   .header__nav {
-    display: none; /* Reemplazar por menu desplegable en JS */
+    display: none; /* Reemplazar por menu desplegable en js */
   }
 
   .header__toggle {
