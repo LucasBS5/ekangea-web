@@ -60,7 +60,7 @@ window.addEventListener('load', () => {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: triggerEl,
-      start: '120px',
+      start: 'top top',
       end: '+=3000',
       pin: true,
       scrub: 1,
