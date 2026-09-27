@@ -20,7 +20,7 @@
     --font-title: 'Aclonica', sans-serif;
     --font-body: "Inter", sans-serif;
     --color-bg:#1d1d20;
-    --color-font-text:#c7c7cc;
+    --color-font-body:#c7c7cc;
     --color-font-title:#E5E5E5;
     
     /* Header */
@@ -38,6 +38,9 @@
     --space-md: 1.5rem;
     --space-xl: 4rem;
 
+    /* Espaciados mobile */
+    --section-spacing-mobile: 0 1.5rem 3rem 1.5rem;
+
     --anim-timing: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Un easing más elegante */
 }
 
@@ -54,15 +57,6 @@ html{
 
 body{
     background-color: var(--color-bg);
-}
-
-.story {
-    padding: 6rem 1.5rem;
-}
-
-.project,
-.us {
-  padding: var(--section-spacing); 
 }
 
 .header{
@@ -83,9 +77,9 @@ body{
 }
 
 .header.is-visible {
-  transform: translateY(0);
-  opacity: 1;
-  pointer-events: auto;
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .header__container {
@@ -121,6 +115,7 @@ body{
 }
 
 .header__link {
+    font-family: var(--font-body);
     color: var(--text-muted);
     text-decoration: none;
     font-size: 0.9375rem;
@@ -130,13 +125,13 @@ body{
 
 .header__link:hover,
 .header__link--active {
-  color: var(--text-main);
+    color: var(--color-font-body);
 }
 
 .header__actions {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .font-title{
@@ -145,19 +140,12 @@ body{
     color: var(--color-font-title);
 }
 
-.font-body{
-    font-family:var(--font-body);
-    color: var(--color-font-text);
-    line-height: 1.7;
-    margin: 0;
-}
-
 .subtitle{
     font-family:var(--font-body);
     font-size:1rem;
     font-weight: 300;
     font-variation-settings: 'wght' 300;
-    color: var(--color-font-text);
+    color: var(--color-font-body);
 }
 
 .hero{
@@ -173,13 +161,17 @@ body{
     gap: 1.20rem;
 }
 
-/* .section__container{
-    padding: 0 var(--space-md); 
-} */
-
 .section__title{
+    font-family: var(--font-title);
+    color: var(--color-font-title);
+    font-weight: 500;
+    font-variation-settings: 'wght' 500;
     font-size: 1.25rem;
     padding-bottom: 1rem;
+}
+
+.story {
+    padding: 6rem 1.5rem;
 }
 
 .story__container {
@@ -196,7 +188,17 @@ body{
     gap: 1rem;
 }
 
+.project,
+.us {
+    padding: var(--section-spacing); 
+}
+
+
 .body__text{
+    font-family:var(--font-body);
+    color: var(--color-font-body);
+    line-height: 1.7;
+    margin: 0;
     font-size: 1.125rem;
     font-weight: 400;
     font-variation-settings: 'wght' 400;
@@ -213,11 +215,49 @@ body{
 /* ========== RESPONSIVE ========== */
 
 @media (max-width: 768px) {
-  .header__nav {
-    display: none; /* Reemplazar por menu desplegable en js */
-  }
 
-  .header__toggle {
+.header__nav {
+    display: none; /* Reemplazar por menu desplegable en js */
+}
+
+.header__toggle {
     display: flex;
-  }
+}
+
+.font-title{
+    font-size:1.5rem;
+}
+
+.subtitle{
+    font-size:0.8rem;
+}
+
+.hero{
+    gap: 0.6rem;
+}
+
+.story {
+    padding: 3rem 1.5rem;
+}
+
+.story__container {
+    max-width: 100%; 
+    gap: 4rem; 
+}
+
+.project,
+.us {
+    padding: var(--section-spacing-mobile); 
+}
+
+.section__title{
+    font-size: 1rem;
+}
+
+.body__text{
+    line-height: 1.6;
+    margin: 0;
+    font-size: 1rem;
+}
+
 }
