@@ -51,22 +51,23 @@
         </section>
 
         <section class="story" id="story">
+            <div class="story__bg"></div>
             <div class="story__container">
-                <article class="story__cap">
+                <div class="story__cap">
                     <p class="body__text">Los Ekans viven en armonía con su ecosistema sin imponer jerarquías o dominación violenta, conviviendo con el entorno y otras especies en lugar de utilizarlos a su favor.
                     </p>            
-                </article>
-                <article class="story__cap">
+                </div>
+                <div class="story__cap">
                     <p class="body__text">Ekangea se divide en cuatro biomas: Skog el bosque, Jangal la jungla, Sahra el Desierto y Nivis el nevado.</p>
                     <p class="body__text">Si bien los diferentes biomas hacen que haya separaciones naturales y diferencias culturales, eso no afecta en su visión de comunidad y respeto.</p>
-                </article>
-                <article class="story__cap">
+                </div>
+                <div class="story__cap">
                     <p class="body__text">Cada año, se celebra un ritual llamado <span>"Ekexis"</span>, en el cual los Ekans que pasen a su vida adulta obtendran la revelación de su aura, la energía espiritual que determina el bioma con el que posee mayor afinidad y en el que continuará desarrollando su vida.</p>
-                </article>
-                <article class="story__cap">
+                </div>
+                <div class="story__cap">
                     <p class="body__text">Los rastros de una civilización extinta hace miles de años continúan inquietando a los Ekans, quienes curiosos sobre los artefactos y materiales que día a día descubren en el planeta, teorizan acerca de sus utilidades y el modo de vida de estos seres anteriores a ellos.
                     </p>
-                </article>
+                </div>
             </div>
         </section>
         <section class="project" id="project">
@@ -88,11 +89,13 @@
                         <input class="" type="text" name="name" id="name" autocomplete="off" required/>
                         <button class="" type="submit" class="form-btn">Entrar</button>
                     </form>
-                    <p id="error-msg" style="color: rgba(247, 65, 65, 0.616); display: none;">Incorrecto. Intentálo de nuevo</p>
+                    <p class="body__text" id="error-msg" style="color: rgba(247, 65, 65, 0.616); display: none;">Incorrecto. Intentálo de nuevo</p>
                 </div>
             </div>
         </section>
     </main>
-    <script src="scripts/scroll-reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="scripts/scripts.js"></script>
 </body>
 </html>
