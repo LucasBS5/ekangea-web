@@ -1,0 +1,26 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.ico">
+        <title>Ekexis</title>
+
+        <link rel="stylesheet" href="style/normalize.css">
+        <link rel="stylesheet" href="style/base.css">
+        <link rel="stylesheet" href="style/form.css">
+    </head>
+    <body>
+        <main class="form">
+            <div class="form__content">
+                <form class="form-ekexis" id="redirect-form">
+                    <label class="form__label" for="name">Escribí la palabra:</label>
+                    <input class="form__input" type="text" name="name" id="name" autocomplete="off" required>
+                    <button class="form__btn" type="submit">Entrar</button>
+                </form>
+                <p class="body__text" id="error-msg" style="color: rgba(247, 65, 65, 0.616); display: none;">Incorrecto. Intentálo de nuevo</p>
+            </div>
+        </main>
+        <script src="scripts/scripts.js"></script>
+    </body>
+</html>

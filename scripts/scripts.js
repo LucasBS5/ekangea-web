@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!form || !inputEl || !errorMsg) return;
 
   const PALABRA_SECRETA = "ekexis"; 
-  const DESTINO_URL = "https://www.instagram.com/ekangea.tdm3/";
+  const DESTINO_URL = "ekexis.html";
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -61,7 +61,7 @@ window.addEventListener('load', () => {
     scrollTrigger: {
       trigger: triggerEl,
       start: 'top top',
-      end: '+=3000',
+      end: '+=1600',
       pin: true,
       scrub: 1,
     }
