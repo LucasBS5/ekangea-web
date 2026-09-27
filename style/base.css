@@ -275,6 +275,9 @@ body{
     margin: 2rem 0;
     display: flex;
     justify-content: center;
+
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 10%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, black 10%, black 10%, transparent);
 }
 
 .img__caps img {
@@ -282,6 +285,7 @@ body{
     height: 100%;
     object-fit: cover;
     display: block;
+
 }
 
 .project{

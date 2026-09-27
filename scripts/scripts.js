@@ -42,53 +42,74 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ========== GSAP SCROLL FREEZE ========== */
 
 window.addEventListener('load', () => {
-  // Asegura que las librerias cargan
   if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
 
   const triggerEl = document.querySelector('.story');
   const caps = gsap.utils.toArray('.story__cap');
 
-  // Si no existen los elementos en la página actual, salimos sin error
   if (!triggerEl || caps.length === 0) return;
 
   gsap.registerPlugin(ScrollTrigger);
 
-  // Inicializar el primer capitulo
-  gsap.set(caps[0], { opacity: 1, y: 0, filter: 'blur(0px)' });
+  caps.forEach((cap, i) => {
+    gsap.set(cap, {
+      opacity: i === 0 ? 1 : 0,
+      y: i === 0 ? 0 : 30,
+      filter: i === 0 ? 'blur(0px)' : 'blur(8px)',
+      pointerEvents: i === 0 ? 'auto' : 'none'
+    });
+  });
 
-  // Linea de tiempo atada al scroll
+  const scrollDistance = (caps.length - 1) * 1000;
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: triggerEl,
       start: 'top top',
-      end: '+=1600',
+      end: `+=${scrollDistance}`,
       pin: true,
-      scrub: 1,
+      anticipatePin: 1, 
+      scrub: 0.8,       
+      invalidateOnRefresh: true
     }
   });
 
-  // Animacion
   caps.forEach((cap, index) => {
-    if (index === 0) {
+    const isFirst = index === 0;
+    const isLast = index === caps.length - 1;
+
+    if (isFirst) {
+      tl.to({}, { duration: 1.5 });
       tl.to(cap, {
         opacity: 0,
-        y: -40,
+        y: -25,
         filter: 'blur(8px)',
-        duration: 1
-      }, '+=0.5');
+        duration: 1,
+        ease: 'power2.inOut',
+        onComplete: () => { cap.style.pointerEvents = 'none'; }
+      });
     } else {
+
       tl.to(cap, {
         opacity: 1,
         y: 0,
         filter: 'blur(0px)',
-        duration: 1
-      })
-      .to(cap, {
-        opacity: 0,
-        y: -40,
-        filter: 'blur(8px)',
-        duration: 1
-      }, '+=0.8');
+        duration: 1,
+        ease: 'power2.inOut',
+        onStart: () => { cap.style.pointerEvents = 'auto'; }
+      }, '-=0.2'); 
+
+      tl.to({}, { duration: 2.0 });
+
+      if (!isLast) {
+        tl.to(cap, {
+          opacity: 0,
+          y: -25,
+          filter: 'blur(8px)',
+          duration: 1,
+          ease: 'power2.inOut',
+          onComplete: () => { cap.style.pointerEvents = 'none'; }
+        });
+      }
     }
   });
 
