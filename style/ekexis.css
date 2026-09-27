@@ -18,6 +18,7 @@
 }
 
 .coming-soon__prox {
+    font-family: var(--font-title);
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.28em;
@@ -27,14 +28,16 @@
 }
 
 .coming-soon__title {
-    font-size: 5rem;
+    font-family: var(--font-title);
+    font-size: 5.2rem;
     font-weight: 800;
     letter-spacing: -0.04em;
     line-height: 1;
-    color: var(--text-main);
+    color: var(--color-font-sub);
 }
 
 .coming-soon__date {
+    font-family: var(--font-title);
     font-size: 1.3rem;
     font-weight: 400;
     letter-spacing: 0.22em;
