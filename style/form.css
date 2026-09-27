@@ -1,0 +1,35 @@
+input, textarea, select, button {
+  font-family: var(--font-body);
+}
+
+input[type="text"], input[type="submit"]{
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #e0e1e2;
+  box-shadow: 0 0 0 3px rgba(212, 211, 211, 0.25);
+}
+
+button[type="submit"] {
+  background-color: #27282967;
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid #1e1e1f;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #313131;
+  border-color: #bdbebe;
+}
+
+.form-ekesis{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+}

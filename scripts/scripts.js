@@ -1,4 +1,5 @@
-/* HEADER reveal */
+/* ========== HEADER reveal ========== */
+
 const header = document.querySelector('.header');
 const SCROLL_THRESHOLD = 120;
 
@@ -12,8 +13,8 @@ if (header) {
   }, { passive: true });
 }
 
+/* ========== Formulario ========== */
 
-/* Formulario */
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('redirect-form');
   const inputEl = document.getElementById('name');
@@ -38,10 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+/* ========== GSAP SCROLL FREEZE ========== */
 
-/* GSAP SCROLL FREEZE */
 window.addEventListener('load', () => {
-  // Asegura que las librerías cargaron
+  // Asegura que las librerias cargan
   if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
 
   const triggerEl = document.querySelector('.story');
@@ -52,21 +53,21 @@ window.addEventListener('load', () => {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  // Inicializar la primera tarjeta visible
+  // Inicializar el primer capitulo
   gsap.set(caps[0], { opacity: 1, y: 0, filter: 'blur(0px)' });
 
-  // Línea de tiempo atada al scroll
+  // Linea de tiempo atada al scroll
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: triggerEl,
-      start: 'top top',
+      start: '120px',
       end: '+=3000',
       pin: true,
       scrub: 1,
     }
   });
 
-  // Animación secuencial
+  // Animacion
   caps.forEach((cap, index) => {
     if (index === 0) {
       tl.to(cap, {
