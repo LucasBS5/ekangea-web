@@ -9,35 +9,31 @@
 @font-face {
     font-family: 'Inter'; 
     src: url('../fonts/Inter-Variable.ttf') format('truetype');
-    font-weight: 100 900; 
+    font-weight: 300; 
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'MoonDance'; 
-    src: url('../fonts/MoonDance-Regular.ttf') format('truetype'); 
+    font-family: 'Inter'; 
+    src: url('../fonts/Inter-Variable.ttf') format('truetype');
+    font-weight: 500; 
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'MsMadi'; 
-    src: url('../fonts/MsMadi-Regular.ttf') format('truetype'); 
+    font-family: 'Blackadder'; 
+    src: url('../fonts/BlackadderITC.ttf') format('truetype');
+    font-weight: 200; 
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'JustMe'; 
-    src: url('../fonts/JustMe-Regular.ttf') format('truetype'); 
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Annie'; 
-    src: url('../fonts/Annie-Regular.ttf') format('truetype'); 
+    font-family: 'Gigi'; 
+    src: url('../fonts/Gigi.ttf') format('truetype');
+    font-weight: 400; 
     font-style: normal;
     font-display: swap;
 }
@@ -45,6 +41,7 @@
 :root{
     --font-title: 'Aclonica', sans-serif;
     --font-body: "Inter", sans-serif;
+    /* --font-secondary: "Inter", sans-serif; */
     --color-bg:#1d1d20;
     --color-bg-secondary: #0b0c10;
     --color-font-body:#b8b8be;
@@ -124,6 +121,20 @@ body{
     display: flex;
     align-items: center;
     height: 100%;
+    -webkit-filter: drop-shadow(0px 0px 4px rgba(255,255,255,0.80));
+    animation: glow-pulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow-pulse {
+    0% {
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+    opacity: 0.85;
+    }
+    100% {
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.95))
+    drop-shadow(0 0 20px rgba(255, 255, 255, 0.4)); 
+    opacity: 1;
+    }
 }
 
 .header__logo-img {
@@ -146,8 +157,8 @@ body{
     font-family: var(--font-body);
     color: var(--text-muted);
     text-decoration: none;
-    font-size: 0.9375rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 600;
     transition: color var(--transition);
 }
 
@@ -173,7 +184,7 @@ body{
 
 .font-title{
     font-family:var(--font-title);
-    font-size:3rem;
+    font-size: 3rem;
     background-image: linear-gradient(to right, #b365a6e7, #aa628ad7, #6897acd7, #af8f5ed7);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -183,10 +194,10 @@ body{
 
 .subtitle{
     font-family:var(--font-body);
-    font-size:1rem;
-    font-weight: 300;
-    font-variation-settings: 'wght' 300;
-    color: var(--color-font-body);
+    font-size: 1rem;
+    font-weight: 200;
+    font-variation-settings: 'wght' 200;
+    color: var(--text-muted);
 }
 
 .hero{
@@ -199,7 +210,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.20rem;
+    gap: 1.25rem;
 }
 
 .section__title{
@@ -216,7 +227,7 @@ body{
     color: var(--color-font-body);
     line-height: 1.7;
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 400;
     font-variation-settings: 'wght' 400;
 }
@@ -257,7 +268,7 @@ body{
     max-width: 600px;
     width: 90%;
     max-height: 85vh; 
-    text-align: left;
+    text-align: center;
     opacity: 0; 
     transform: translateY(30px);
     filter: blur(10px);
@@ -275,7 +286,6 @@ body{
     margin: 2rem 0;
     display: flex;
     justify-content: center;
-
     -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 10%, transparent);
     mask-image: linear-gradient(to bottom, transparent, black 10%, black 10%, transparent);
 }
@@ -285,13 +295,12 @@ body{
     height: 100%;
     object-fit: cover;
     display: block;
-
 }
 
 .project{
     min-height: 40vh; 
     width: 100%;
-    background-image: linear-gradient(to bottom, #1d1d20 0%,#b365a6e7 35%,#6897acd7 75%,#af8f5ed7 100%);
+    background-image: linear-gradient(to bottom, #1d1d20 0%,#4f2f5538 35%);
 }
 
 /* ========== RESPONSIVE ========== */
@@ -300,49 +309,41 @@ body{
 
 .header{
     display:none;
-}
-
-/* .header__nav {
-    display: none; /* Reemplazar por menu desplegable en js 
-}
-
-.header__toggle {
-    display: flex;
-} */
+    }
 
 .font-title{
     font-size:1.5rem;
-}
+    }
 
 .subtitle{
     font-size:0.8rem;
-}
+    }
 
 .hero{
     gap: 0.6rem;
-}
+    }   
 
 .story {
     padding: 3rem 1.5rem;
-}
+    }
 
 .story__container {
     max-width: 100%; 
-}
+    }
 
 .project,
 .us {
     padding: var(--section-spacing-mobile); 
-}
+    }
 
 .section__title{
     font-size: 1rem;
-}
+    }
 
 .body__text{
     line-height: 1.6;
     margin: 0;
     font-size: 1rem;
-}
+    }
 
 }
