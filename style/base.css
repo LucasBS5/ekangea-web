@@ -190,6 +190,11 @@ body{
     -webkit-text-fill-color: transparent;
     color: transparent;
     background-clip: text;
+
+    opacity: 0;
+    transform: translateY(10px);
+    animation: aparecer 0.8s ease forwards;
+    animation-delay: 0.5s;
 }
 
 .subtitle{
@@ -198,6 +203,18 @@ body{
     font-weight: 200;
     font-variation-settings: 'wght' 200;
     color: var(--text-muted);
+
+    opacity: 0;
+    transform: translateY(10px);
+    animation: aparecer 0.8s ease forwards;
+    animation-delay: 0.7s;
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hero{
