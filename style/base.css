@@ -201,7 +201,9 @@ body{
 }
 
 .hero{
-    background-image: url('../img/image.png');
+    background-image: url('/img/bg.png');
+    -webkit-mask-image: linear-gradient(to bottom, #1d1d20, #1d1d20, #1d1d20, transparent);
+    mask-image: linear-gradient(to bottom, #1d1d20, #1d1d20, #1d1d20, transparent);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -210,7 +212,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.25rem;
+    gap: 1rem;
 }
 
 .section__title{
