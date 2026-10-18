@@ -48,3 +48,12 @@
   50% { filter: hue-rotate(180deg) blur(12px); }
   100% { filter: hue-rotate(360deg) blur(12px); }
 }
+
+@media (pointer: coarse) {
+  #follower {
+    display: none !important;
+  }
+  html, *, a, button, input {
+    cursor: auto !important;
+  }
+}
