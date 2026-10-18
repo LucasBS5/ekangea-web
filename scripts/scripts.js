@@ -1,28 +1,43 @@
 /* ========== CURSOR ========== */
 
-const follower = document.getElementById('follower');
+const followerHTML = `
+    <div id="follower">
+      <div id="circle1"></div>
+      <div id="circle2"></div>
+    </div>
+  `;
+  document.body.insertAdjacentHTML('beforeend', followerHTML);
 
-let mouseX = window.innerWidth / 2;
-let mouseY = window.innerHeight / 2;
+  const follower = document.getElementById('follower');
 
-let currentX = mouseX;
-let currentY = mouseY;
+  let mouseX = window.innerWidth / 2;
+  let mouseY = window.innerHeight / 2;
 
-window.addEventListener('mousemove', (event) => {
-  mouseX = event.clientX;
-  mouseY = event.clientY;
-});
+  window.addEventListener('mousemove', (event) => {
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+  });
 
-function render() {
-  currentX += (mouseX - currentX) * 0.5;
-  currentY += (mouseY - currentY) * 0.5;
+  function render() {
+    if (follower) {
+      follower.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+    }
+    requestAnimationFrame(render);
+  }
 
-  follower.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+  render();
 
-  requestAnimationFrame(render);
-}
+  document.addEventListener('mouseover', (e) => {
+    if (e.target.closest('a, button, input, [role="button"]')) {
+      document.body.classList.add('is-hovering');
+    }
+  });
 
-render();
+  document.addEventListener('mouseout', (e) => {
+    if (e.target.closest('a, button, input, [role="button"]')) {
+      document.body.classList.remove('is-hovering');
+    }
+  });
 
 /* ========== HEADER reveal ========== */
 
