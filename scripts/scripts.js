@@ -1,4 +1,7 @@
+
 /* ========== CURSOR ========== */
+
+if (window.matchMedia('(pointer: fine)').matches) {
 
 const followerHTML = `
     <div id="follower">
@@ -38,6 +41,7 @@ const followerHTML = `
       document.body.classList.remove('is-hovering');
     }
   });
+}
 
 /* ========== HEADER reveal ========== */
 
@@ -53,6 +57,7 @@ if (header) {
     }
   }, { passive: true });
 }
+
 
 /* ========== Formulario ========== */
 
@@ -79,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
 
 /* ========== GSAP SCROLL FREEZE ========== */
 
