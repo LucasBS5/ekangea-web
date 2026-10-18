@@ -1,3 +1,29 @@
+/* ========== CURSOR ========== */
+
+const follower = document.getElementById('follower');
+
+let mouseX = window.innerWidth / 2;
+let mouseY = window.innerHeight / 2;
+
+let currentX = mouseX;
+let currentY = mouseY;
+
+window.addEventListener('mousemove', (event) => {
+  mouseX = event.clientX;
+  mouseY = event.clientY;
+});
+
+function render() {
+  currentX += (mouseX - currentX) * 0.5;
+  currentY += (mouseY - currentY) * 0.5;
+
+  follower.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+
+  requestAnimationFrame(render);
+}
+
+render();
+
 /* ========== HEADER reveal ========== */
 
 const header = document.querySelector('.header');
