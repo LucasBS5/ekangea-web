@@ -316,38 +316,38 @@ body::-webkit-scrollbar-thumb {
 }
 
 .story__cap {
+    display: flex;
+    align-items: center;
     position: absolute;
     max-width: 600px;
     width: 90%;
-    max-height: 85vh; 
+    min-height: 100svh; 
     text-align: center;
     opacity: 0; 
     transform: translateY(30px);
     filter: blur(10px);
     will-change: transform, opacity, filter; /* esto optimiza el render en GPU por las imagenes */
-    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 }
 
 .img__cap {
     width: 100%;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    margin: 2rem 0;
+    max-width: 400px;
     display: flex;
     justify-content: center;
+    overflow: hidden;
+    margin: 1rem 0;
     -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 10%, transparent);
     mask-image: linear-gradient(to bottom, transparent, black 10%, black 10%, transparent);
 }
 
 .img__caps img {
     width: 100%;
-    max-width: 400px;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
+    max-height: 35vh; /* Clave: nunca ocupará más del 35% de la altura de la pantalla */
 }
 
 .project{
@@ -414,13 +414,12 @@ body::-webkit-scrollbar-thumb {
 
 .img__cap {
     width: 100%;
-    aspect-ratio: 1;
-    margin: 2rem 0;
     -webkit-mask-image: linear-gradient(to right, transparent, black 40%, black 40%, transparent);
     mask-image: linear-gradient(to left, transparent, black 40%, black 40%, transparent);
 }
 
 .img__caps img{
-    max-width: 70vw; /* O un porcentaje como 70vw si preferís que escale con la pantalla */
+    max-height: 25vh; 
+    max-width: 280px;
     }
 }
