@@ -159,6 +159,5 @@ window.addEventListener('load', () => {
       }
     }
   });
-  
   ScrollTrigger.refresh();
 });
