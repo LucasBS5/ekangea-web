@@ -317,7 +317,7 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: center;
     overflow: hidden;
-    margin: 1rem 0;
+    margin: 3rem 0;
     -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 10%, transparent);
     mask-image: linear-gradient(to bottom, transparent, black 10%, black 10%, transparent);
 }
@@ -394,7 +394,6 @@ body::-webkit-scrollbar-thumb {
 
 .img__cap {
     width: 100%;
-    margin: 3rem 0;
     -webkit-mask-image: linear-gradient(to right, transparent, black 40%, black 40%, transparent);
     mask-image: linear-gradient(to left, transparent, black 40%, black 40%, transparent);
 }
