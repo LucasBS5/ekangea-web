@@ -44,6 +44,7 @@
     --border-color: rgba(255, 255, 255, 0.08);
     --text-color-main: #f5f5f7;
     --max-width-header: 1200px;
+    --header-height: 90px;
     --transition: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     /* Espaciados */
     --section-spacing: 6rem 4.25rem 6rem 4.25rem;
@@ -123,7 +124,6 @@ body::-webkit-scrollbar-thumb {
     max-width: var(--max-width-header);
     height: 100%;
     margin: 0 auto;
-    padding: 1rem 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -265,69 +265,73 @@ body::-webkit-scrollbar-thumb {
 }
 
 .story {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    height: 100dvh;
-    padding: 0 1.5rem;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  box-sizing: border-box; 
+  padding-top: var(--header-height);
+  padding-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .story__bg {
-    position: absolute;
-    inset: 0;
-    background: var(--color-bg);
-    z-index: 1;
+  position: absolute;
+  inset: 0;
+  background: var(--color-bg);
+  z-index: 1;
 }
 
 .story__container {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    max-width: 1200px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem; 
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .story__cap {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    max-width: 600px;
-    width: 90%;
-    min-height: 100svh; 
-    text-align: center;
-    opacity: 0; 
-    transform: translateY(30px);
-    filter: blur(10px);
-    will-change: transform, opacity, filter; /* esto optimiza el render en GPU por las imagenes */
-    flex-direction: column;
-    justify-content: center;
+  position: absolute;
+  max-width: 600px;
+  width: 90%;
+  height: auto;
+  max-height: calc(100% - 2rem); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0; 
+  transform: translateY(30px);
+  filter: blur(10px);
+  will-change: transform, opacity, filter;
 }
 
 .img__cap {
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    margin: 3rem 0;
-    -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 10%, transparent);
-    mask-image: linear-gradient(to bottom, transparent, black 10%, black 10%, transparent);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin: 1.5rem 0; 
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
 }
 
 .img__caps img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    max-height: 35vh; /* Clave: nunca ocupará más del 35% de la altura de la pantalla */
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  max-height: 35vh;
 }
 
 .project{
