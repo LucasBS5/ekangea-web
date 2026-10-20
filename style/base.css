@@ -387,13 +387,14 @@ body::-webkit-scrollbar-thumb {
     }
 
 .story__cap {
-    max-width: 300px;
+    max-width: 600px;
     width: 100%;
     max-height: 85vh; 
 }
 
 .img__cap {
     width: 100%;
+    margin: 3rem 0;
     -webkit-mask-image: linear-gradient(to right, transparent, black 40%, black 40%, transparent);
     mask-image: linear-gradient(to left, transparent, black 40%, black 40%, transparent);
 }

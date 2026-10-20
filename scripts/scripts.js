@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!form || !inputEl || !errorMsg) return;
 
   const PALABRA_SECRETA = "ekexis"; 
-  const DESTINO_URL = "ekexis.html";
+  const DESTINO = "ekexis.html";
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (inputValor === PALABRA_SECRETA) {
       errorMsg.style.display = 'none';
-      window.location.href = DESTINO_URL;
+      window.location.href = DESTINO;
     } else {
       errorMsg.style.display = 'block';
     }
@@ -107,7 +107,7 @@ window.addEventListener('load', () => {
     });
   });
 
-  const scrollDistance = (caps.length - 1) * 1000;
+  const scrollDistance = (caps.length - 1) * 1500;
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: triggerEl,
