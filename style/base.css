@@ -38,7 +38,7 @@
     --color-bg-secondary: #0b0c10;
     --color-font-body:#b8b8be;
     --color-font-sub:#E5E5E5;
-    --text-muted: #8a8f98;
+    --color-text-muted: #8a8f98;
     /* Header */
     --bg-header: rgba(18, 18, 18, 0.70);
     --border-color: rgba(255, 255, 255, 0.08);
@@ -167,7 +167,7 @@ body::-webkit-scrollbar-thumb {
 
 .header__link {
     font-family: var(--font-body);
-    color: var(--text-muted);
+    color: var(--color-text-muted);
     text-decoration: none;
     font-size: 1rem;
     font-weight: 400;
@@ -214,7 +214,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 1rem;
     font-weight: 200;
     font-variation-settings: 'wght' 200;
-    color: var(--text-muted);
+    color: var(--color-text-muted);
     opacity: 0;
     transform: translateX(-10px);
     animation: aparecer 0.9s ease forwards;
