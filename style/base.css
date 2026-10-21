@@ -94,7 +94,7 @@ body::-webkit-scrollbar-track {
 }
  
 body::-webkit-scrollbar-thumb {
-  background-color: #4f2f5538;
+  background-color: #4f2f5569;
 }
 
 .header{
@@ -231,7 +231,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .hero{
-    background-image: url('/img/bg.png');
+    background-image: url('/img/bg-upscale.webp');
     -webkit-mask-image: linear-gradient(to bottom, #1d1d20, #1d1d20, #1d1d20, transparent);
     mask-image: linear-gradient(to bottom, #1d1d20, #1d1d20, #1d1d20, transparent);
     background-size: cover;

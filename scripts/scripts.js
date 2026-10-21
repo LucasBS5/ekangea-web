@@ -107,7 +107,7 @@ window.addEventListener('load', () => {
     });
   });
 
-  const scrollDistance = (caps.length - 1) * 1500;
+  const scrollDistance = (caps.length - 1) * 1000;
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: triggerEl,
