@@ -50,6 +50,9 @@
 
 @media (max-width: 768px) {
     .coming-soon{
-        background-image: radial-gradient(ellipse 100% 60% at 50% 50%, rgba(157, 70, 229, 0.12), transparent 70%);
+        background-image: radial-gradient(ellipse 50% 40% at 0% 15%, rgba(96, 126, 223, 0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 40% at 100% 15%, rgba(229, 70, 203, 0.11) 0%, transparent 70%),
+        radial-gradient(ellipse 55% 45% at 100% 90%, rgba(57, 133, 79, 0.1) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 45% at 0% 95%, rgba(223, 217, 131, 0.1) 0%, transparent 70%);
     }
 }
