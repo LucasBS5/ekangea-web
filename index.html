@@ -12,19 +12,21 @@
     
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/form.css">
     <link rel="stylesheet" href="style/cursor.css">
 
 </head>
 <body>
     <header class="header">
         <div class="header__container">
-            <a href="/form.html" class="header__logo">
+            <a href="#" class="header__logo">
                 <img src="img/logo-blanco.png" alt="Logo de Ekangea" class="header__logo-img">
             </a>
             <nav class="header__nav" aria-label="Navegacion">
                 <ul class="header__menu">
                     <li class="header__item"><a href="#home" class="header__link">Inicio</a></li>
                     <li class="header__item"><a href="#story" class="header__link">Historia</a></li>
+                    <li class="header__item"><a href="#formulario" class="header__link">31/10</a></li>
                 </ul>
             </nav>
         </div>
@@ -71,8 +73,16 @@
                 </div>
             </div>
         </section>
-        <section class="project" id="project">
+        <section class="form" id="formulario">
             <div class="section__container">
+                <div class="form__content">
+                    <form class="form-ekexis" id="redirect-form">
+                        <label class="form__label" for="name">EKEXIS</label>
+                        <input class="form__input" type="text" name="name" id="name" autocomplete="off" required>
+                        <button class="form__btn" type="submit">Entrar</button>
+                    </form>
+                    <p class="body__text" id="error-msg" style="color: rgba(247, 65, 65, 0.616); display: none;">Incorrecto. Intentálo de nuevo</p>
+                </div>
             </div>
         </section>
     </main>
