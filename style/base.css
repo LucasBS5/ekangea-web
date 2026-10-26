@@ -177,7 +177,7 @@ body::-webkit-scrollbar-thumb {
     font-family: var(--font-body);
     color: var(--color-text-muted);
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 600;
     transition: color var(--transition);
 }
@@ -222,7 +222,7 @@ body::-webkit-scrollbar-thumb {
 .subtitle{
     font-family:var(--font-body);
     color: var(--color-font-body);
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 300;
     font-variation-settings: 'wght' 300;
     font-style: italic;
@@ -268,9 +268,9 @@ body::-webkit-scrollbar-thumb {
 .body__text{
     font-family:var(--font-body);
     color: var(--color-font-body);
-    line-height: 1.7;
+    line-height: 1.5;
     margin: 0;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 300;
     font-variation-settings: 'wght' 300;
     font-style: italic;
