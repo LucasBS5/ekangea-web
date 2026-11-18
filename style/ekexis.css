@@ -24,32 +24,53 @@ html {
     width: 100%;
 }
 
-.coming-soon__prox {
-    font-family: var(--font-title);
+.coming-soon__date {
+    /* font-family: var(--font-title);
     color: var(--color-text-muted);
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.28em;
-    text-transform: uppercase;
+    text-transform: uppercase; */
+    font-size: 0;
     padding: 0.5rem 1.15rem;
 }
 
+.svg-fecha{
+    width: 100%;       
+    max-width: 160px;  
+    height: auto;
+}
+
 .coming-soon__title {
-    font-family: var(--font-title);
+    /* font-family: var(--font-title);
     color: var(--color-font-sub);
     font-size: 5.2rem;
     font-weight: 800;
     letter-spacing: -0.04em;
-    line-height: 1;
+    line-height: 1; */
+    font-size: 0;
 }
 
-.coming-soon__date {
-    font-family: var(--font-title);
+.svg-ekexis {
+    width: 100%;       
+    max-width: 320px;  
+    height: auto;   
+}
+
+.coming-soon__place {
+    /* font-family: var(--font-title);
     color: var(--color-text-muted);
     font-size: 1.3rem;
     font-weight: 400;
-    letter-spacing: 0.22em;
+    letter-spacing: 0.22em; */
+    font-size: 0;
     padding-top: 0.5rem;
+}
+
+.svg-date {
+    width: 100%;       
+    max-width: 200px;  
+    height: auto;   
 }
 
 .info__content {
